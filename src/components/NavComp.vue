@@ -34,7 +34,7 @@
       </button>
       <ul class="nav justify-content-center align-text-center mx-auto">
         <li class="nav-item">
-          <router-link class="nav-link" to="/">Home</router-link> 
+          <router-link class="nav-link" to="/">Home</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/products">Products</router-link>
@@ -46,8 +46,15 @@
           <router-link to="/contact" class="nav-link">Contact</router-link>
         </li>
       </ul>
-      <a href="/Pages/products.html"
-        ><svg
+
+      <button
+        type="button"
+        class="btn bg-none mx-5"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal"
+        id="cart-btn"
+      >
+        <svg
           fill="#F5E6E8"
           version="1.1"
           id="Capa_1"
@@ -77,10 +84,30 @@
                 ></path>
               </g>
             </g>
-          </g></svg
-      ></a>
+          </g>
+        </svg>
+      </button>
     </div>
   </nav>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Added Items</h4>
+          <button type="button" class="btn" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+        <div id="cart-body">
+          <div id="results"><h5>Total</h5></div>
+        </div>
+        <div class="modal-footer">
+          <button class="checkout-btn" onclick="checkout()">Checkout</button>
+          <p>Total: <span id="total"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -101,4 +128,21 @@ export default {};
 .navbar-toggler {
   display: none !important;
 }
+.modal-content{
+  background-color: #967aa1 !important;
+  color: #F5E6E8 !important;
+  border: none
+  !important;
+  border-radius: 0 !important;
+}
+
+.rembutton{
+  background-color: #192a51 !important;
+  color: #f5e6e8 !important;
+} 
+.modal{
+  border: none !important;
+  border-radius: 0 !important;
+}
+
 </style>

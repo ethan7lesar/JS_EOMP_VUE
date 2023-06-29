@@ -42,6 +42,10 @@ export default {
   },
 
   components: { CardComp },
+
+  methods(){
+    
+  }
 };
 </script>
 <style>
