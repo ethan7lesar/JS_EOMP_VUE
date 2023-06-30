@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="admin mt-5">
-        <a href="/Pages/admin.html"><div class="btn admin-btn">Admin</div></a>
+        <router-link to="/admin"><div class="btn admin-btn">Admin</div></router-link>
       </div>
     </div>
   </footer>
