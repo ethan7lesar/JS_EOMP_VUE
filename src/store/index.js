@@ -3,7 +3,7 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     products: null,
-    product: null,
+     product: null,
   },
   mutations: {
     setProducts: (state, products) => {
