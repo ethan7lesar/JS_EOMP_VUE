@@ -17,7 +17,7 @@ export default createStore({
     getProducts: async (context) => {
       fetch("https://ethan7lesar.github.io/data/db.json")
         .then((res) => res.json())
-        .then((products) => context.commit("setProducts", products));
+        .then((data) => context.commit("setProducts", data.products));
     },
     // getProduct: async (context, id) => {
     //   fetch(" http://localhost:3000/products/" + id)
